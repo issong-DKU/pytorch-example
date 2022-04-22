@@ -22,6 +22,7 @@ https://github.com/minhabean/pytorch-example.git        self.fc1 = nn.Linear(921
         x = self.conv1(x)
         x = F.relu(x)
         x = self.conv2(x)
+	x = F.relu(x)
         x = F.max_pool2d(x, 2)
         x = self.dropout1(x)
         x = torch.flatten(x, 1)
